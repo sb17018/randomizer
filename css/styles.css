@@ -28,7 +28,7 @@ header img {
 
 #mainWrapper {
 	padding-top: 1%;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 	background-color: white;
 }
 
@@ -40,6 +40,7 @@ header img {
 
 #modeInfoHolder {
 	padding-top: 0.2rem;
+	padding-bottom: 0.5rem;
 	padding-right: 1rem;
 	text-align: right;
 	background-color: white;
