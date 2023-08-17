@@ -1,0 +1,202 @@
+body,
+input {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+}
+
+header h1 {
+	margin: 0;
+	padding: 3rem;
+	color: white;
+	font-family: "Raleway", sans-serif;
+}
+
+header img{
+	width:20%;
+	margin: 2rem;
+}
+
+#mainWrapper,
+#mainWrapperAdmin {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	background-color: white;
+}
+
+#modeInfoHolder {
+	padding-top: 0.2rem;
+	padding-right: 1rem;
+	text-align: right;
+	background-color: white;
+}
+
+#modeInfo {
+	padding: 0.2rem 1rem 0.4rem;
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	color: white;
+	background-color: red;
+	visibility: hidden;
+}
+
+#keysFrame {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#numberDisplay {
+	width: 24rem;
+	height: 24rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2rem;
+	border: 0.5rem solid #dddddd;
+	border-radius: 2rem;
+	color: #dddddd;
+	line-height: 24rem;
+	text-align: center;
+	box-shadow: 0.1rem 0.1rem 0.3rem #aaaaaa;
+}
+
+#numberDisplayed {
+	font-size: 18rem;
+	font-weight: 800;
+}
+
+.numbers-keys {
+	width: 7rem;
+	height: 7rem;
+	margin: 1rem;
+	border: 0;
+	border-radius: 1rem;
+	font-size: 4rem;
+	font-weight: 800;
+	box-shadow: 0.1rem 0.1rem 0.3rem;
+}
+
+.numbers-keys:hover {
+	background-color: bisque;
+	box-shadow: 0.1rem 0.1rem 0.5rem;
+	cursor: pointer;
+}
+
+.numbers-keys:active {
+	box-shadow: 0.05rem 0.05rem 0.3rem;
+}
+
+#controlPanel {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3rem;
+	border-radius: 1rem;
+	background-color: black;
+}
+
+#controlInfo {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 2rem;
+	font-weight: 200;
+	letter-spacing: 0.1rem;
+	color: white;
+}
+
+hr {
+	margin-bottom: 2rem;
+	color: white;
+}
+
+.option-selection {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#randomizeSelect,
+#visibilitySelect {
+	width: 20rem;
+	margin: 2rem;
+	border: 0.3rem solid rgb(122, 121, 121);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-size: 3rem;
+}
+
+#visibilitySelect {
+	border-color: red;
+	color: red;
+}
+
+#bottomStripe blockquote, #bottomStripe cite{
+	color: white;
+	font-family: "Raleway", sans-serif;
+	font-weight: 100;
+}
+
+#bottomStripe blockquote{
+	margin-bottom: 0.5rem;
+}
+
+#bottomStripe cite{
+	font-size: .9rem;
+}
+
+#bottomStripe{
+	margin: 1rem auto 2rem;
+	text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+	header h1 {
+		padding: 1.5rem;
+	}
+	
+header img{
+	width:50%;
+	margin: 1rem;
+}
+
+	#mainWrapper {
+		padding-top: 2.5rem;
+		padding-bottom: 2rem;
+	}
+
+	#numberDisplay {
+		width: 16rem;
+		height: 16rem;
+		margin-bottom: 0.7rem;
+		border: 0.3rem solid #dddddd;
+		border-radius: 1rem;
+		line-height: 16rem;
+		box-shadow: 0.15rem 0.15rem 0.1rem;
+	}
+
+	#numberDisplayed {
+		font-size: 12rem;
+	}
+
+	.numbers-keys {
+		width: 4.6rem;
+		height: 4.6rem;
+		margin: 0.6rem;
+		border-radius: 1rem;
+		font-size: 3rem;
+	}
+
+	#randomizeSelect,
+	#visibilitySelect {
+		width: 14rem;
+		margin: 1.4rem 1rem;
+		border: 0.3rem solid rgb(122, 121, 121);
+		border-radius: 0.5rem;
+		padding: 0.5rem;
+		font-size: 2rem;
+	}
+}

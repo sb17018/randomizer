@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Randomizer - Control</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="module" src="js/scripts.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<img src="img/randomizer_logo.png" width="20%" alt="Randomizer - logo" />
+			<div id="modeInfoHolder"><span id="modeInfo">ORDER</span></div>
+		</header>
+		<div id="mainWrapperAdmin">
+			<div id="controlPanel">
+				<span id="controlInfo">Control panel</span>
+				<hr />
+				<div class="option-selection">
+					<select name="randomizeSelect" id="randomizeSelect">
+						<option value="order" selected>ORDER</option>
+						<option value="random">RANDOM</option>
+					</select>
+				</div>
+
+				<div class="option-selection">
+					<select name="visibilitySelect" id="visibilitySelect">
+						<option value="hidden" selected>HIDDEN</option>
+						<option value="shown">SHOWN</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
