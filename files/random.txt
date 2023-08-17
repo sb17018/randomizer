@@ -1,1 +1,1 @@
-{"behavior":"random", "visibility":"shown"}
+{"behavior":"order", "visibility":"hidden"}
