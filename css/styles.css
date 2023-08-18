@@ -142,12 +142,12 @@ hr {
 
 #randomizeSelect,
 #visibilitySelect {
-	width: 20rem;
+	width: 25vmax;
 	margin: 2rem;
 	border: 0.3rem solid rgb(122, 121, 121);
 	border-radius: 0.5rem;
 	padding: 0.5rem;
-	font-size: 3rem;
+	font-size: 3vmax;
 }
 
 #visibilitySelect {
