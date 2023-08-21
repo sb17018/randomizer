@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,18 +13,19 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="css/styles.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;300;100&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;800&display=swap" rel="stylesheet">
 	<script src="js/scripts.js" defer></script>
 </head>
-
 <body>
 	<div id="flexContainer">
 		<header>
 			<img src="img/randomizer_logo.png" width="20%" alt="Randomizer - logo" />
 		</header>
-		<div id="modeInfoHolder"><span id="modeInfo">ORDER</span></div>
+		<div id="tagsWrap">
+			<div id="modeInfoHolder"><span id="modeInfo">ORDER</span></div>
+		</div>
 		<div id="mainWrapper">
 			<div id="numberDisplay"><span id="numberDisplayed">#</span></div>
 			<div id="keysFrame">
@@ -47,11 +47,12 @@
 			</div>
 		</div>
 		<div id="bottomStripe">
-			<blockquote>W dniu dobrym korzystaj z dobra, lecz w dniu złym zważ: <br />Również ten uczynił Bóg tak samo
-				jak tamten, po to,<b> by człowiek nic nie dociekł z tego, co będzie po nim</b>.</blockquote>
-			<cite>Kaznodziei Salomona 7,14</cite>
+			<div id="passageFrame">
+				<blockquote>W dniu dobrym korzystaj z dobra, lecz&nbsp;w&nbsp;dniu&nbsp;złym&nbsp;zważ: <br />Również ten uczynił Bóg tak
+					samo jak tamten, po to,<b> by&nbsp;człowiek&nbsp;nic&nbsp;nie&nbsp;dociekł z&nbsp;tego,&nbsp;co&nbsp;będzie</b> po&nbsp;nim.</blockquote>
+				<cite>Kaznodziei Salomona 7,14</cite>
+			</div>
 		</div>
 	</div>
 </body>
-
 </html>

@@ -1,1 +1,1 @@
-{"behavior":"order", "visibility":"hidden"}
+{"behavior":"order", "visibility":"hidden", "passageVisibility":"black"}

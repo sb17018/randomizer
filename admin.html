@@ -27,7 +27,10 @@
 		<header>
 			<img src="img/randomizer_logo.png" width="20%" alt="Randomizer - logo" />
 		</header>
+		<div id="tagsWrap">
+			<div id="passageVisibilityHolder"><span id="passageVisibility">PASSAGE SHOWN</span></div>
 			<div id="modeInfoHolder"><span id="modeInfo">ORDER</span></div>
+		</div>
 		<div id="mainWrapperAdmin">
 			<div id="controlPanel">
 				<span id="controlInfo">Control panel</span>
@@ -43,6 +46,13 @@
 					<select name="visibilitySelect" id="visibilitySelect">
 						<option value="hidden" selected>HIDDEN</option>
 						<option value="shown">SHOWN</option>
+					</select>
+				</div>
+
+				<div class="option-selection">
+					<select name="passageVisibilitySelect" id="passageVisibilitySelect">
+						<option value="black" selected>BLACK</option>
+						<option value="passage">PASSAGE</option>
 					</select>
 				</div>
 			</div>

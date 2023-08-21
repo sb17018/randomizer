@@ -1,9 +1,8 @@
 <?php
 
- header('Cache-Control: no-cache');
- header("Access-Control-Allow-Origin: *");
- header("Content-Type: text/event-stream");
-
+    header('Cache-Control: no-cache');
+    header("Access-Control-Allow-Origin: *");
+    header("Content-Type: text/event-stream");
 
 //  while(true){
     $fileName = "../files/random.txt";

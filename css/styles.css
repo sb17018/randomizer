@@ -1,6 +1,6 @@
 body,
 input {
-	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-family: "Arial Narrow Bold", sans-serif;
 }
 
 body {
@@ -15,9 +15,9 @@ body {
 }
 
 header {
-min-height: 50px;
-display: inline-flex;
-align-items: center;
+	min-height: 50px;
+	display: inline-flex;
+	align-items: center;
 }
 
 header img {
@@ -39,15 +39,22 @@ header img {
 	background-color: white;
 }
 
-#modeInfoHolder {
+#tagsWrap{
+	text-align: right;
+	background-color: white;
+}
+
+#modeInfoHolder, #passageVisibilityHolder {
+	width: fit-content;
 	padding-top: 0.2rem;
 	padding-bottom: 0.5rem;
 	padding-right: 1rem;
 	text-align: right;
 	background-color: white;
+	display: inline-block;
 }
 
-#modeInfo {
+#modeInfo, #passageVisibility {
 	padding: 0.2rem 1rem 0.4rem;
 	border-bottom-left-radius: 0.3rem;
 	border-bottom-right-radius: 0.3rem;
@@ -56,6 +63,11 @@ header img {
 	color: white;
 	background-color: red;
 	visibility: hidden;
+}
+
+#passageVisibility {
+	color: black;
+	background-color: rgb(245, 225, 49);
 }
 
 #keysFrame {
@@ -87,7 +99,7 @@ header img {
 
 #numberDisplayed {
 	font-size: 10rem;
-	font-weight: 500;
+	font-weight: 800;
 }
 
 .numbers-keys {
@@ -141,7 +153,8 @@ hr {
 }
 
 #randomizeSelect,
-#visibilitySelect {
+#visibilitySelect,
+#passageVisibilitySelect {
 	width: 25vmax;
 	margin: 2rem;
 	border: 0.3rem solid rgb(122, 121, 121);
@@ -163,13 +176,12 @@ hr {
 
 #bottomStripe blockquote{
 	margin: 0 .5rem;
-	/* margin-bottom: 0.5rem; */
-	font-size: 1.8vh;
+	font-size: 1.8vmax;
 	flex-shrink: 1;
 }
 
 #bottomStripe cite{
-	font-size: 1.3vh;
+	font-size: 1.3vmax;
 }
 
 #bottomStripe{

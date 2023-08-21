@@ -1,12 +1,15 @@
 const behaviorSelection = document.querySelector("#randomizeSelect");
 const visibilitySelection = document.querySelector("#visibilitySelect");
+const passageVisibilitySelection = document.querySelector("#passageVisibilitySelect");
 
 const source = new EventSource("./php/server-event-handler.php");
+
 source.onmessage = function (event) {
-	console.log(event.data);
 	let dataObject = JSON.parse(event.data);
 	setBehaviorTag(dataObject["behavior"]);
 	setHideTag(dataObject["visibility"]);
+	setPassageHideTag(dataObject["passageVisibility"]);
+	setPassageHide(dataObject["passageVisibility"]);
 	if (behaviorSelection) {
 		behaviorSelection
 			.querySelector("option[selected]")
@@ -23,13 +26,20 @@ source.onmessage = function (event) {
 			.querySelector("option[value=" + dataObject["visibility"] + "]")
 			.setAttribute("selected", true);
 	}
+	if (passageVisibilitySelection) {
+		passageVisibilitySelection
+			.querySelector("option[selected]")
+			.removeAttribute("selected");
+		passageVisibilitySelection
+			.querySelector("option[value=" + dataObject["passageVisibility"] + "]")
+			.setAttribute("selected", true);
+	}
 };
 
 document.addEventListener("DOMContentLoaded", () => {
 	if (behaviorSelection != null) {
-		console.log("A");
 		activeRandomizeDrop();
-		setBehaviorAndVisibility("order", "hidden");
+		setBehaviorAndVisibility("order", "hidden", "black");
 	}
 });
 
@@ -37,7 +47,8 @@ var activeRandomizeDrop = () => {
 	behaviorSelection.addEventListener("change", function () {
 		setBehaviorAndVisibility(
 			behaviorSelection.value,
-			visibilitySelection.value
+			visibilitySelection.value,
+			passageVisibilitySelection.value
 		);
 		setBehaviorTag(this.value);
 	});
@@ -53,9 +64,27 @@ var activeShowingDrop = () => {
 	visibilitySelection.addEventListener("change", function () {
 		setBehaviorAndVisibility(
 			behaviorSelection.value,
-			visibilitySelection.value
+			visibilitySelection.value,
+			passageVisibilitySelection.value
 		);
 		setHideTag(this.value);
+	});
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+	if (passageVisibilitySelection != null) {
+		activePassageShowingDrop();
+	}
+});
+
+var activePassageShowingDrop = () => {
+	passageVisibilitySelection.addEventListener("change", function () {
+		setBehaviorAndVisibility(
+			behaviorSelection.value,
+			visibilitySelection.value,
+			passageVisibilitySelection.value
+		);
+		setPassageHideTag(this.value);
 	});
 };
 
@@ -132,16 +161,15 @@ function checkIfRandom(elem) {
 	toggleRandomOrder(elem, behaviorTag.textContent.toLowerCase());
 }
 
-function setBehaviorAndVisibility(beh, vis) {
+function setBehaviorAndVisibility(beh, vis, pass) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
-			console.log(this.responseText);
 		}
 	};
 	xhttp.open("POST", "./php/writefile.php", true);
 	xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
-	xhttp.send("randomizeSelect=" + beh + "&visibilitySelect=" + vis);
+	xhttp.send("randomizeSelect=" + beh + "&visibilitySelect=" + vis + "&passageVisibilitySelect=" + pass);
 }
 
 function setBehaviorTag(isRandom) {
@@ -157,5 +185,29 @@ function setHideTag(isHidden) {
 		behaviorTag.style.visibility = "hidden";
 	} else {
 		behaviorTag.style.visibility = "visible";
+	}
+}
+
+const passageVisibilityTag = document.querySelector("#passageVisibility");
+
+function setPassageHideTag(isPassageTagHidden) {
+	if (passageVisibilityTag != null) {
+		if (isPassageTagHidden == "black") {
+			passageVisibilityTag.style.visibility = "hidden";
+		} else {
+			passageVisibilityTag.style.visibility = "visible";
+		}
+	}
+}
+
+const passage = document.querySelector("#passageFrame");
+
+function setPassageHide(isPassageHidden) {
+	if (passage != null) {
+		if (isPassageHidden == "black") {
+			passage.style.visibility = "hidden";
+		} else {
+			passage.style.visibility = "visible";
+		}
 	}
 }
